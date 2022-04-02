@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a550171c18a144be85aee12017d69, type: 3}
+  m_Name: Audio Manager File
+  m_EditorClassIdentifier: 
+  audioMixer:
+  - {fileID: 0}
+  soundPrefab: {fileID: 322064603624763291, guid: 6051d75b0602b2d4e80762524c183b04, type: 3}
+  isPopulated: 1
+  directory:
+  - HeartConnect/Audio
+  library:
+  - key: BGM_FeverTime1
+    value: {fileID: 8300000, guid: 7a10ab3d4f395a44c99f5e8139019244, type: 3}
+  - key: BGM_FeverTime2
+    value: {fileID: 8300000, guid: 36f5ac835dcfabc4e9bc4ac1592e9a13, type: 3}
+  - key: BGM_Potato
+    value: {fileID: 8300000, guid: 87890a66193394e3cb7d6284cc6b4344, type: 3}
+  - key: SFX_Cat1
+    value: {fileID: 8300000, guid: d5fe92ba16d87364a92c20faecc3f047, type: 3}
+  - key: SFX_Cat2
+    value: {fileID: 8300000, guid: 10ac1ce7b30b72e4d9e8b2f135d84dc3, type: 3}
+  - key: SFX_GameOver
+    value: {fileID: 8300000, guid: 8610a8c909548944093ed224f261fe7f, type: 3}
+  - key: SFX_Hit
+    value: {fileID: 8300000, guid: c47852ab06b6a454dbc82655701c8581, type: 3}
+  - key: UI_ButtonClick
+    value: {fileID: 8300000, guid: 583a483a0d7ea3f4ba2b0dec1fc1a6c3, type: 3}
+  tabPos: 0

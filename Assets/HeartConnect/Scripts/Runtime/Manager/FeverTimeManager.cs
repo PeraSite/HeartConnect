@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using CarterGames.Assets.AudioManager;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -25,6 +26,11 @@ public class FeverTimeManager : MonoBehaviour {
 	public Sprite FeverBackground;
 
 	public List<SpriteRenderer> Backgrounds;
+
+	[Header("Audio")]
+	public AudioClip FeverTimeMusic;
+
+	public AudioClip NormalMusic;
 
 	private CancellationToken _cts;
 
@@ -63,6 +69,7 @@ public class FeverTimeManager : MonoBehaviour {
 				.AppendCallback(() => background.sprite = FeverBackground)
 				.Append(background.DOColor(Color.white, 0.3f));
 		});
+		MusicPlayer.instance.PlayTrack(FeverTimeMusic, TransitionType.CrossFade);
 
 		await UniTask.Delay(TimeSpan.FromSeconds(FeverTimeSeconds), cancellationToken: _cts);
 		StopFeverTime();
@@ -72,6 +79,9 @@ public class FeverTimeManager : MonoBehaviour {
 		IsFeverTime.Value = false;
 		MoveSpeed.Value = 5f;
 		Fever.Value = 0;
+
+		MusicPlayer.instance.PlayTrack(NormalMusic, TransitionType.CrossFade);
+
 		Backgrounds.ForEach(background => {
 			DOTween.Sequence(background)
 				.Append(background.DOColor(Color.black, 0.3f))

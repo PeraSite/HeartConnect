@@ -1,4 +1,4 @@
-﻿using System;
+﻿using CarterGames.Assets.AudioManager;
 using DG.Tweening;
 using UnityEngine;
 
@@ -25,6 +25,8 @@ public class TouchCat : MonoBehaviour {
 		Icon.localScale = Vector3.zero;
 		IconGroup.alpha = 0f;
 		Icon.DOKill();
+
+		AudioManager.instance.Play("UI_ButtonClick", 0.3f);
 
 		DOTween.Sequence(Icon)
 			.Append(Icon.DOScale(Vector3.one, 0.3f))

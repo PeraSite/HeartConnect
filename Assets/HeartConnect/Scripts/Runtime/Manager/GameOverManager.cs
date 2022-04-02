@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CarterGames.Assets.AudioManager;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour {
 	public IntEvent HealthChangedEvent;
+
+	public StringEvent SceneChangeRequest;
 
 	private void OnEnable() {
 		HealthChangedEvent.Register(OnHealthChanged);
@@ -16,7 +17,8 @@ public class GameOverManager : MonoBehaviour {
 
 	private void OnHealthChanged(int health) {
 		if (health <= 0) {
-			SceneManager.LoadScene("GameOver");
+			AudioManager.instance.Play("SFX_GameOver");
+			SceneChangeRequest.Raise("GameOver");
 		}
 	}
 }

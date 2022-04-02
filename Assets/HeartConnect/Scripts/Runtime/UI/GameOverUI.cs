@@ -11,12 +11,14 @@ public class GameOverUI : MonoBehaviour {
 	public TextMeshProUGUI ScoreText;
 	public TextMeshProUGUI BestScoreText;
 
+	public StringEvent SceneChangeRequest;
+
 	private void Start() {
 		ScoreText.text = Score.Value.ToString();
 		BestScoreText.text = BestScore.Value.ToString();
 	}
 
 	public void ReturnMain() {
-		SceneManager.LoadScene("MainMenu");
+		SceneChangeRequest.Raise("MainMenu");
 	}
 }

@@ -1,7 +1,9 @@
 ﻿using System;
+using CarterGames.Assets.AudioManager;
 using DG.Tweening;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Cat : FallingObject {
 	public int Score;
@@ -42,11 +44,11 @@ public class Cat : FallingObject {
 		if (_isAnimating) return;
 
 		var score = IsFeverTime.Value ? Score * 2 : Score;
-
 		ScoreVariable.Add(score);
-
 		if (!IsFeverTime.Value)
 			FeverVariable.Value = Mathf.Clamp(FeverVariable.Value + FeverAmount, 0, 100);
+
+		AudioManager.instance.Play(Random.value >= 0.5f ? "SFX_Cat1" : "SFX_Cat2", 0.5f);
 
 		DOTween.Sequence(_sr)
 			.AppendCallback(() => {
