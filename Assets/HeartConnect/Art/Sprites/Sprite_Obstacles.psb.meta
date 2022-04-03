@@ -112,7 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 698}
+    uvTransform: {x: -112, y: 609}
   - name: OBS_chocolate
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -93, y: -28}
+    uvTransform: {x: -209, y: -117}
   - name: OBS_woolenyarn
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -156,7 +156,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 814, y: -135}
+    uvTransform: {x: 698, y: -224}
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
@@ -193,11 +193,11 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
-  documentAlignment: 7
+  documentAlignment: 0
   importHiddenLayers: 0
   importedTextureWidth: 2048
   importedTextureHeight: 2048
-  documentSize: {x: 1166, y: 892}
+  documentSize: {x: 1399, y: 1070}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
@@ -235,7 +235,7 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
-  generateGOHierarchy: 0
+  generateGOHierarchy: 1
   textureAssetName: Sprite_Obstacles Texture
   prefabAssetName: Sprite_Obstacles Prefab
   spriteLibAssetName: Sprite_Obstacles Sprite Lib
