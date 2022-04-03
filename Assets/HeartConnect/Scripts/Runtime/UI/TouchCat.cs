@@ -1,4 +1,5 @@
-﻿using CarterGames.Assets.AudioManager;
+﻿using System;
+using CarterGames.Assets.AudioManager;
 using DG.Tweening;
 using UnityEngine;
 
@@ -6,6 +7,10 @@ public class TouchCat : MonoBehaviour {
 	public Canvas Canvas;
 	public RectTransform Icon;
 	public CanvasGroup IconGroup;
+
+	private void Awake() {
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+	}
 
 	private void OnDisable() {
 		Icon.DOKill();

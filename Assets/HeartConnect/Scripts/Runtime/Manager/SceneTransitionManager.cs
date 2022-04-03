@@ -9,8 +9,7 @@ using UnityEngine.UI;
 public class SceneTransitionManager : MonoBehaviour {
 	public StringEvent SceneChangeRequested;
 	public Image FadeImage;
-
-	private CancellationToken Token;
+	public BoolVariable IsFading;
 
 	protected void Awake() {
 		if (GameObject.FindGameObjectsWithTag("TransitionManager").Length > 1) {
@@ -18,7 +17,6 @@ public class SceneTransitionManager : MonoBehaviour {
 			return;
 		}
 		DontDestroyOnLoad(gameObject);
-		Token = this.GetCancellationTokenOnDestroy();
 	}
 
 	protected void OnEnable() {
@@ -33,8 +31,10 @@ public class SceneTransitionManager : MonoBehaviour {
 	private void OnSceneChangeRequest(string scene) => OnSceneChangeRequestAsync(scene).Forget();
 
 	private async UniTaskVoid OnSceneChangeRequestAsync(string scene) {
-		await FadeImage.DOFade(1f, 0.5f).WithCancellation(Token);
-		await SceneManager.LoadSceneAsync(scene).ToUniTask(cancellationToken: Token);
-		await FadeImage.DOFade(0f, 0.5f).WithCancellation(Token);
+		IsFading.Value = true;
+		await FadeImage.DOFade(1f, 0.5f);
+		await SceneManager.LoadSceneAsync(scene);
+		await FadeImage.DOFade(0f, 0.5f);
+		IsFading.Value = false;
 	}
 }

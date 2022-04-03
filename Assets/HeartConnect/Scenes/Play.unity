@@ -432,6 +432,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 235842710}
     - {fileID: 11400000, guid: 9edf80b5589520044a60ff562a8be4c4, type: 2}
+    - {fileID: 11400000, guid: 5090577dd7829cc48bac971c759984ed, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -443,13 +444,16 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 10
       Data: 0
     - Name: 
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 13
       Data: 
@@ -1153,7 +1157,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.47, y: 10.01}
+    oldSize: {x: 12.47, y: 10.0100975}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2165,6 +2169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5819460293614737894, guid: 236a2b042be3a05418a64bcff59d6d7b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5819460293614737895, guid: 236a2b042be3a05418a64bcff59d6d7b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2208,6 +2216,10 @@ PrefabInstance:
     - target: {fileID: 5819460293614737895, guid: 236a2b042be3a05418a64bcff59d6d7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819460293614737897, guid: 236a2b042be3a05418a64bcff59d6d7b, type: 3}
+      propertyPath: shouldShowClips
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a2b042be3a05418a64bcff59d6d7b, type: 3}

@@ -32,7 +32,7 @@ MonoBehaviour:
   - key: SFX_GameOver
     value: {fileID: 8300000, guid: 8610a8c909548944093ed224f261fe7f, type: 3}
   - key: SFX_Hit
-    value: {fileID: 8300000, guid: c47852ab06b6a454dbc82655701c8581, type: 3}
+    value: {fileID: 8300000, guid: 1259de1c1653ab142ac58c535974495e, type: 3}
   - key: UI_ButtonClick
     value: {fileID: 8300000, guid: 583a483a0d7ea3f4ba2b0dec1fc1a6c3, type: 3}
-  tabPos: 0
+  tabPos: 1

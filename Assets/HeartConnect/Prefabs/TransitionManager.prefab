@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneChangeRequested: {fileID: 11400000, guid: 8efa1897b906b3048b2d572102d0a4a6, type: 2}
   FadeImage: {fileID: 1479277775647380395}
+  IsFading: {fileID: 11400000, guid: fada5a42112b07a4b8309c5be2f25938, type: 2}
 --- !u!1 &1479277777001291526
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 #pragma warning disable CS0067
 
 public class GyroMiddleware : ScriptableObject, IInputMiddleware {
-	public int Order() => 999;
+	public int Order() => 1;
 
 	private const float GYRO_MULTIPLIER = 2f;
 
